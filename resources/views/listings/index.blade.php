@@ -1,6 +1,5 @@
-@extends('layout')
+<x-layout>
 
-@section('content')
 @include('partials._hero')
 @include('partials._search')
 
@@ -39,4 +38,4 @@ $test=1;
 
 </div>
 
-@endsection
+</x-layout>
