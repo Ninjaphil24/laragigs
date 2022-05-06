@@ -36,10 +36,16 @@ use App\Models\Listing;
 // update - Update listing
 // destroy - Delete listing 
 
+// Create a new route, 
+// controller method and 
+// view
+// That's the workflow to create a new piece of functionality.
+
 // All Listings
 Route::get('/', [ListingController::class, 'index']);
 
+// Show create form
+Route::get('listings/create', [ListingController::class, 'create']);
+
 // Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
- 
