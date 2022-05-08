@@ -21,7 +21,7 @@ class ListingController extends Controller
             'listing'=> $listing
         ]);
     }
-<<<<<<< HEAD
+
     // Show create form
     public function create() {
         return view('listings.create');
@@ -29,19 +29,19 @@ class ListingController extends Controller
 
     // Store Listing Data
     public function store(Request $request) {
-        $formFields = $request->validate([
-            'title'=> 'required',
-            'company'=> ['required', Rule::unique('listings', 'company')],
-            'location'=> 'required',
-            'website'=>'required',
-            'email'=>['required','email'],
-            'tags'=>'required',
-            'description'=>'required'
-        ]);
-
-        return redirect('/');
+        dd($request->all());
     }
+    //     $formFields = $request->validate([
+    //         'title'=> 'required',
+    //         'company'=> ['required', Rule::unique('listings', 'company')],
+    //         'location'=> 'required',
+    //         'website'=>'required',
+    //         'email'=>['required','email'],
+    //         'tags'=>'required',
+    //         'description'=>'required'
+    //     ]);
 
-=======
->>>>>>> parent of 7e0dff3 (Add create form html/css 2.10.35)
+    //     return redirect('/');
+    // }
+
 }

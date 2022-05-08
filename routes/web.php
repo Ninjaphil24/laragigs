@@ -39,15 +39,12 @@ use App\Models\Listing;
 // All Listings
 Route::get('/', [ListingController::class, 'index']);
 
-<<<<<<< HEAD
 // Show create form
 Route::get('listings/create', [ListingController::class, 'create']);
 
 // Store Listing Data
 Route::post('/listings', [ListingController::class, 'store']);
 
-=======
->>>>>>> parent of 7e0dff3 (Add create form html/css 2.10.35)
 // Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
