@@ -63,3 +63,6 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 // Create New User
 Route::post('/users', [UserController::class, 'store']);
+
+// Logout User
+Route::post('/logout',[UserController::class, 'logout']);

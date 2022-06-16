@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Foundation\Auth\User;
 
 class UserController extends Controller
 {
@@ -31,5 +31,15 @@ class UserController extends Controller
         auth()->login($user);
 
         return redirect('/')->with('message','User created and logged in');
+    }
+
+    // Logout User
+    public function logout(Request $request) {
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/')->with('message', 'You have been logged out!');
     }
 }
